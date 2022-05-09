@@ -1,38 +1,50 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" href="test.css"/>
+    <script>
+        function execute(val) {
+            console.log("clicked")
+            document.getElementById('result').innerHTML += val;
+        }
+        function solve() {
+            let x = document.getElementById('result').innerHTML;
+            let y = eval(x)
+            console.log("calculated")
+            document.getElementById('result').innerHTML = y;
+        }
+    </script>
 </head>
 <body>
-    <div>
+    <div class="wrapper">
         <table>
             <tr>
-                <td colspan="4"><input type='text'/></td>
+                <td colspan="4"><div class="textbox" id="result"></div></td>
             </tr>
             <tr>
-                <td><input type="button" value="7" class='button'/></td>
-                <td><input type="button" value="8" class='button'/></td>
-                <td><input type="button" value="9" class='button'/></td>
-                <td><input type="button" value="/" class='button'/></td>
+                <td><input type="button" value="7" class='button' onclick="execute(value)"/></td>
+                <td><input type="button" value="8" class='button' onclick="execute(value)"/></td>
+                <td><input type="button" value="9" class='button' onclick="execute(value)"/></td>
+                <td><input type="button" value="/" class='button' onclick="execute(value)"/></td>
             </tr>
             <tr>
-                <td><input type="button" value="4" class='button'/></td>
-                <td><input type="button" value="5" class='button'/></td>
-                <td><input type="button" value="6" class='button'/></td>
-                <td><input type="button" value="x" class='button'/></td>
+                <td><input type="button" value="4" class='button' onclick="execute(value)"/></td>
+                <td><input type="button" value="5" class='button' onclick="execute(value)"/></td>
+                <td><input type="button" value="6" class='button' onclick="execute(value)"/></td>
+                <td><input type="button" value="x" class='button' onclick="execute(value)"/></td>
             </tr>
             <tr>
-                <td><input type="button" value="1" class='button'/></td>
-                <td><input type="button" value="2" class='button'/></td>
-                <td><input type="button" value="3" class='button'/></td>
-                <td><input type="button" value="-" class='button'/></td>
+                <td><input type="button" value="1" class='button' onclick="execute(value)"/></td>
+                <td><input type="button" value="2" class='button' onclick="execute(value)"/></td>
+                <td><input type="button" value="3" class='button' onclick="execute(value)"/></td>
+                <td><input type="button" value="-" class='button' onclick="execute(value)"/></td>
             </tr>
             <tr>
-                <td colspan="2"><input type="button" value="0" class='button'/></td>
-                <td><input type="button" value="." class='button'/></td>
-                <td><input type="button" value="+" class='button'/></td>
+                <td colspan="2"><input type="button" value="0" class='zero' onclick="execute(value)"/></td>
+                <td><input type="button" value="." class='button' onclick="execute(value)"/></td>
+                <td><input type="button" value="+" class='button' onclick="execute(value)"/></td>
             </tr>
             <tr>
-                <td colspan="4"><input type='button' value='=' class='orange'/></td>
+                <td colspan="4"><input type='button' value='=' class='orange' onclick="solve()"/></td>
             </tr>
         </table>
     </div>
