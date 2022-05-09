@@ -8,10 +8,15 @@
         }
         function solve() {
             let x = document.getElementById('result').innerHTML;
-            let y = eval(x)
+            let y = eval(x).toFixed(7)
             console.log("calculated")
             document.getElementById('result').innerHTML = y;
         }
+
+        function ac() {
+            document.getElementById('result').innerHTML = ""
+        }
+
     </script>
 </head>
 <body>
@@ -39,8 +44,9 @@
                 <td><input type="button" value="-" class='button' onclick="execute(value)"/></td>
             </tr>
             <tr>
-                <td colspan="2"><input type="button" value="0" class='zero' onclick="execute(value)"/></td>
+                <td colspan="1"><input type="button" value="0" class='button' onclick="execute(value)"/></td>
                 <td><input type="button" value="." class='button' onclick="execute(value)"/></td>
+                <td><input type="button" value="AC" class='button' onclick="ac()"/></td>
                 <td><input type="button" value="+" class='button' onclick="execute(value)"/></td>
             </tr>
             <tr>
