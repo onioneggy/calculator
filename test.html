@@ -8,8 +8,15 @@
         }
         function solve() {
             let x = document.getElementById('result').innerHTML;
-            let y = eval(x).toFixed(7)
+            let y = Number(eval(x).toPrecision(10))
+            
+            // if (y.toString().length > 1) {
+            //     y = y.toFixed(7)
+            // }
+
+            let caca = typeof y
             console.log("calculated")
+            console.log(caca)
             document.getElementById('result').innerHTML = y;
         }
 
@@ -35,7 +42,7 @@
                 <td><input type="button" value="4" class='button' onclick="execute(value)"/></td>
                 <td><input type="button" value="5" class='button' onclick="execute(value)"/></td>
                 <td><input type="button" value="6" class='button' onclick="execute(value)"/></td>
-                <td><input type="button" value="x" class='button' onclick="execute(value)"/></td>
+                <td><input type="button" value="x" class='button' onclick="execute('*')"/></td>
             </tr>
             <tr>
                 <td><input type="button" value="1" class='button' onclick="execute(value)"/></td>
@@ -44,7 +51,7 @@
                 <td><input type="button" value="-" class='button' onclick="execute(value)"/></td>
             </tr>
             <tr>
-                <td colspan="1"><input type="button" value="0" class='button' onclick="execute(value)"/></td>
+                <td><input type="button" value="0" class='button' onclick="execute(value)"/></td>
                 <td><input type="button" value="." class='button' onclick="execute(value)"/></td>
                 <td><input type="button" value="AC" class='button' onclick="ac()"/></td>
                 <td><input type="button" value="+" class='button' onclick="execute(value)"/></td>
