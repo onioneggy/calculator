@@ -1,30 +1,7 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" href="test.css"/>
-    <script>
-        function execute(val) {
-            console.log("clicked")
-            document.getElementById('result').innerHTML += val;
-        }
-        function solve() {
-            let x = document.getElementById('result').innerHTML;
-            let y = Number(eval(x).toPrecision(10))
-            
-            // if (y.toString().length > 1) {
-            //     y = y.toFixed(7)
-            // }
-
-            let caca = typeof y
-            console.log("calculated")
-            console.log(caca)
-            document.getElementById('result').innerHTML = y;
-        }
-
-        function ac() {
-            document.getElementById('result').innerHTML = ""
-        }
-
-    </script>
+    <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
     <div class="wrapper">
